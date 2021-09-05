@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Condicional", "Condicional\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteCondicional2", "TesteCondicional2\TesteCondicional2.csproj", "{8088DB1A-6CF7-438E-840C-7F1709F911CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteDeEscopo", "TesteDeEscopo\TesteDeEscopo.csproj", "{F5F35C3F-D85E-4293-B42B-8DAC27569259}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{8088DB1A-6CF7-438E-840C-7F1709F911CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8088DB1A-6CF7-438E-840C-7F1709F911CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8088DB1A-6CF7-438E-840C-7F1709F911CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5F35C3F-D85E-4293-B42B-8DAC27569259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5F35C3F-D85E-4293-B42B-8DAC27569259}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5F35C3F-D85E-4293-B42B-8DAC27569259}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5F35C3F-D85E-4293-B42B-8DAC27569259}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
