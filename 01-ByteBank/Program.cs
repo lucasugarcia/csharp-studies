@@ -4,16 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _1_PrimeiroProjeto
+namespace _01_ByteBank
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Olá mundo!");
-            Console.WriteLine("Tecle enter para encerrar a aplicação...");
-
-            Console.ReadLine();
         }
     }
 }
