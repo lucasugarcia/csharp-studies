@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace _01_ByteBank
 {
-    class Program
+    public class ContaCorrente
     {
-        static void Main(string[] args)
-        {
-            ContaCorrente sadas = new ContaCorrente();
-        }
+        public string titular;
+        public int agencia;
+        public int numero;
+        public int saldo;
     }
 }
