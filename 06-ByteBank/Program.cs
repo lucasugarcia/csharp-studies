@@ -12,16 +12,16 @@ namespace _06_ByteBank
         {
             ContaCorrente conta = new ContaCorrente();
             Cliente cliente = new Cliente();
-            cliente.nome = "Lucas";
-            cliente.cpf = "123.963.987-45";
-            cliente.profissao = "Desenvolvedor";
+            cliente.Nome = "Lucas";
+            cliente.Cpf = "123.963.987-45";
+            cliente.Profissao = "Desenvolvedor";
 
             conta.Titular = cliente;
 
             conta.Saldo = -10;
 
             Console.WriteLine(conta.Saldo);
-            Console.WriteLine(conta.Titular.nome);
+            Console.WriteLine(conta.Titular.Nome);
 
             Console.ReadLine();
         }
