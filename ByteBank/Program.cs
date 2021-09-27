@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _05_ByteBank
+namespace ByteBank
 {
-    public class Cliente
+    class Program
     {
-        public string nome;
-        public string cpf;
-        public string profissao;
+        static void Main(string[] args)
+        {
+        }
     }
 }
