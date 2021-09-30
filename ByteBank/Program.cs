@@ -33,7 +33,12 @@ namespace ByteBank
 
             sistemaInterno.Logar(maria, "123456");
             sistemaInterno.Logar(maria, "abc");
+            
+            ParceiroComercial parceiroComercial = new ParceiroComercial();
+            parceiroComercial.Senha = "123456";
 
+            sistemaInterno.Logar(parceiroComercial, "123456");
+            sistemaInterno.Logar(parceiroComercial, "abc");
         }
 
         public static void CalcularBonificacao()
