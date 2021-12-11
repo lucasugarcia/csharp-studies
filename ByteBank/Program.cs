@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,36 @@ namespace ByteBank
     class Program
     {
         static void Main(string[] args)
+        {
+            CarregarContas();
+
+            Console.ReadLine();
+        }
+
+        private static void CarregarContas()
+        {
+            LeitorDeArquivos leitor = null;
+
+            try
+            {
+                leitor = new LeitorDeArquivos("contas1.txt");
+
+                leitor.LerProximaLinha();
+                leitor.LerProximaLinha();
+                leitor.LerProximaLinha();
+            }
+            catch (IOException)
+            {
+                Console.WriteLine("IOException capturada");
+            }
+            finally
+            {
+                if (leitor != null)
+                    leitor.Fechar();
+            }
+        }
+
+        private static void TesteInnerException()
         {
             try
             {
@@ -22,8 +53,6 @@ namespace ByteBank
                 Console.WriteLine(ex.Message);
                 Console.WriteLine(ex.StackTrace);
             }
-           
-            Console.ReadLine();
         }
 
         private static void Metodo()
@@ -47,7 +76,7 @@ namespace ByteBank
             catch (DivideByZeroException)
             {
                 Console.WriteLine("Exceção com número = " + numero + " e divisor = " + divisor);
-                
+
                 throw;
             }
         }
