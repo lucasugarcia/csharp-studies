@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ByteBank
+namespace ByteBank.Modelos
 {
     public class OperacaoFinanceiraException : Exception
     {
@@ -19,8 +19,8 @@ namespace ByteBank
 
         }
 
-        public OperacaoFinanceiraException(string mensagem, Exception innerException)
-            : base(mensagem, innerException)
+        public OperacaoFinanceiraException(string mensagem, Exception excecaoInterna)
+            : base(mensagem, excecaoInterna)
         {
 
         }
