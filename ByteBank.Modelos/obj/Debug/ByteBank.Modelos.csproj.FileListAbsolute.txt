@@ -1,6 +1,0 @@
-C:\Users\LucasGarcia\Desktop\ByteBank\ByteBank.Modelos\bin\Debug\ByteBank.Modelos.dll
-C:\Users\LucasGarcia\Desktop\ByteBank\ByteBank.Modelos\bin\Debug\ByteBank.Modelos.pdb
-C:\Users\LucasGarcia\Desktop\ByteBank\ByteBank.Modelos\obj\Debug\ByteBank.Modelos.csproj.AssemblyReference.cache
-C:\Users\LucasGarcia\Desktop\ByteBank\ByteBank.Modelos\obj\Debug\ByteBank.Modelos.csproj.CoreCompileInputs.cache
-C:\Users\LucasGarcia\Desktop\ByteBank\ByteBank.Modelos\obj\Debug\ByteBank.Modelos.dll
-C:\Users\LucasGarcia\Desktop\ByteBank\ByteBank.Modelos\obj\Debug\ByteBank.Modelos.pdb
