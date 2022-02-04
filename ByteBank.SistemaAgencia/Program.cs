@@ -1,5 +1,4 @@
 ﻿using ByteBank.Modelos;
-using Humanizer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,12 +11,11 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            DateTime dataFim = new DateTime(2022, 2, 4);
-            DateTime dataCorrente = DateTime.Now;
+            string url = "pagina?argumentos";
+            int indiceInterrogacao = url.IndexOf('?');
+            string argumentos = url.Substring(indiceInterrogacao + 1);
 
-            TimeSpan diferenca = dataFim - dataCorrente;
-
-            Console.WriteLine("Vencimento em " + TimeSpanHumanizeExtensions.Humanize(diferenca));
+            Console.WriteLine(argumentos);
 
             Console.ReadLine();
         }
