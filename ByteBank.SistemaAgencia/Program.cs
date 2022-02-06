@@ -12,20 +12,14 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            string padrao = "[0-9]{4,5}-?[0-9]{4}";
-            string textoDeTeste = "Meu nome é Lucas, me ligue em 91234-4321";
+            object conta = new ContaCorrente(456, 687876);
 
-            Match resultado = Regex.Match(textoDeTeste, padrao);
+            string contaToString = conta.ToString();
 
-            Console.WriteLine(resultado.Value);
+            Console.WriteLine("Resultado " + contaToString);
+            Console.WriteLine(conta);
+
             Console.ReadLine();
-
-            //string urlParametros = "http://www.bytebank.com/cambio?moedaOrigem=real&moedaDestino=dolar";
-            //ExtratorValorDeArgumentosURL extratorDeValores = new ExtratorValorDeArgumentosURL(urlParametros);
-
-            //string valor = extratorDeValores.GetValor("moedaDestino");
-
-            //Console.WriteLine("Valor de moedaDestino: " + valor);
         }
     }
 }
