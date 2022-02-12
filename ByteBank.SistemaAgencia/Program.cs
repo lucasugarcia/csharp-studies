@@ -17,6 +17,26 @@ namespace ByteBank.SistemaAgencia
             lista.Adicionar(new ContaCorrente(874, 5679787));
             lista.Adicionar(new ContaCorrente(874, 5679754));
             lista.Adicionar(new ContaCorrente(874, 5679745));
+            lista.Adicionar(new ContaCorrente(874, 5679745));
+            lista.Adicionar(new ContaCorrente(874, 5679745));
+            lista.Adicionar(new ContaCorrente(874, 5679745));
+            lista.Adicionar(new ContaCorrente(874, 5679745));
+
+            ContaCorrente conta = new ContaCorrente(1, 1);
+
+            lista.Adicionar(conta);
+            
+            lista.Adicionar(new ContaCorrente(874, 5679745));
+            lista.Adicionar(new ContaCorrente(874, 5679745));
+            lista.Adicionar(new ContaCorrente(874, 5679745));
+            lista.Adicionar(new ContaCorrente(874, 5679745));
+            lista.Adicionar(new ContaCorrente(874, 5679745));
+
+            lista.EscreverListaNaTela();
+            lista.Remover(conta);
+
+            Console.WriteLine("Após remoção");
+            lista.EscreverListaNaTela();
 
             Console.ReadLine();
         }
