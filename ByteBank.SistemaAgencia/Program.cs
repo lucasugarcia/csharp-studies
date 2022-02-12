@@ -12,12 +12,9 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            object conta = new ContaCorrente(456, 687876);
+            int[] idades = new int[5] { 15, 28, 35, 50, 28 };
 
-            string contaToString = conta.ToString();
-
-            Console.WriteLine("Resultado " + contaToString);
-            Console.WriteLine(conta);
+            Console.WriteLine(idades.Average());
 
             Console.ReadLine();
         }
