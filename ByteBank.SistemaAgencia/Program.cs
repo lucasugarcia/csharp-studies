@@ -12,11 +12,18 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            Lista<int> idades = new Lista<int>();
+            List<int> idades = new List<int>();
 
-            idades.Adicionar(1);
-            idades.Adicionar(2);
-            idades.Adicionar(3);
+            idades.Add(1);
+            idades.Add(2);
+            idades.Add(3);
+
+            idades.AdicionarVarios(4, 5, 6);
+
+            for (int i = 0; i < idades.Count; i++)
+            {
+                Console.WriteLine(idades[i]);
+            }
 
             Console.ReadLine();
         }
