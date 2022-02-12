@@ -12,33 +12,32 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
+            TestaListaDeContaCorrente();
+
+            Console.ReadLine();
+        }
+
+        private static void TestaListaDeContaCorrente()
+        {
             ListaDeContaCorrente lista = new ListaDeContaCorrente();
 
-            lista.Adicionar(new ContaCorrente(874, 5679787));
-            lista.Adicionar(new ContaCorrente(874, 5679754));
-            lista.Adicionar(new ContaCorrente(874, 5679745));
-            lista.Adicionar(new ContaCorrente(874, 5679745));
-            lista.Adicionar(new ContaCorrente(874, 5679745));
-            lista.Adicionar(new ContaCorrente(874, 5679745));
-            lista.Adicionar(new ContaCorrente(874, 5679745));
+            lista.AdicionarVarios(new ContaCorrente(222, 1234), new ContaCorrente(222, 1234));
 
             ContaCorrente conta = new ContaCorrente(1, 1);
+            ContaCorrente[] contas = new ContaCorrente[]
+            {
+                conta,
+                new ContaCorrente(874, 5679787),
+                new ContaCorrente(874, 5679754)
+            };
 
-            lista.Adicionar(conta);
-            
-            lista.Adicionar(new ContaCorrente(874, 5679745));
-            lista.Adicionar(new ContaCorrente(874, 5679745));
-            lista.Adicionar(new ContaCorrente(874, 5679745));
-            lista.Adicionar(new ContaCorrente(874, 5679745));
-            lista.Adicionar(new ContaCorrente(874, 5679745));
+            lista.AdicionarVarios(contas);
 
             for (int i = 0; i < lista.Tamanho; i++)
             {
                 ContaCorrente itemAtual = lista[i];
                 Console.WriteLine($"Item na posição {i} = Conta {itemAtual.Numero}/{itemAtual.Agencia}");
             }
-
-            Console.ReadLine();
         }
 
         private static void TestaArrayDeContaCorrente()
