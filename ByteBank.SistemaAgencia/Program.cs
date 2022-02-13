@@ -27,8 +27,9 @@ namespace ByteBank.SistemaAgencia
                 new ContaCorrente(290, 123)
             };
 
-            var contasNaoBulas = contas.Where(conta => conta != null);
-            var contasOrdenadas = contasNaoBulas.OrderBy(conta => conta.Numero);
+            var contasOrdenadas = contas
+                .Where(conta => conta != null)
+                .OrderBy(conta => conta.Numero);
 
             foreach (var conta in contasOrdenadas)
                 Console.WriteLine($"Conta número {conta.Numero}, ag. {conta.Agencia}");
