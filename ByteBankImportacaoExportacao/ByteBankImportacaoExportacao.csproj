@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3C33875E-3CD5-4637-BB36-54089E3D827F}</ProjectGuid>
+    <ProjectGuid>{E5923D65-D667-4DDC-978A-870C9D44E580}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ByteBank.SistemaAgencia</RootNamespace>
-    <AssemblyName>ByteBank.SistemaAgencia</AssemblyName>
+    <RootNamespace>ByteBankImportacaoExportacao</RootNamespace>
+    <AssemblyName>ByteBankImportacaoExportacao</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,9 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Humanizer, Version=2.3.0.0, Culture=neutral, PublicKeyToken=979442b78dfc278e, processorArchitecture=MSIL">
-      <HintPath>..\packages\Humanizer.Core.2.3.3\lib\netstandard2.0\Humanizer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,22 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Comparadores\ComparadorContaCorrentePorAgencia.cs" />
-    <Compile Include="ExtratorValorDeArgumentosURL.cs" />
-    <Compile Include="Lista.cs" />
-    <Compile Include="Extensoes\ListExtensoes.cs" />
+    <Compile Include="Modelos\Cliente.cs" />
+    <Compile Include="Modelos\ContaCorrente.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ByteBank.Modelos\ByteBank.Modelos.csproj">
-      <Project>{4c216eda-2a17-4eb5-835a-672543332745}</Project>
-      <Name>ByteBank.Modelos</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
