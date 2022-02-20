@@ -12,7 +12,7 @@ namespace ByteBankImportacaoExportacao
     {
         static void Main(string[] args)
         {
-            CriarArquivo();
+            CriarArquivoComWriter();
 
             Console.ReadLine();
         }
@@ -52,7 +52,18 @@ namespace ByteBankImportacaoExportacao
             }
         }
 
-        static ContaCorrente ConverterStringParaContaCorrente(string linha)
+        static void CriarArquivoComWriter()
+        {
+            var caminhoNovoArquivo = "contasExportadas.csv";
+
+            using (var fluxoDeArquivo = new FileStream(caminhoNovoArquivo, FileMode.Create))
+            using (var escritor = new StreamWriter(fluxoDeArquivo))
+            {
+                escritor.Write("456,65465,456.0,Pedro");
+            }
+        }
+
+    static ContaCorrente ConverterStringParaContaCorrente(string linha)
         {
             string[] campos = linha.Split(',');
 
