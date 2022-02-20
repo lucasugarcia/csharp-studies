@@ -12,6 +12,13 @@ namespace ByteBankImportacaoExportacao
     {
         static void Main(string[] args)
         {
+            CriarArquivo();
+
+            Console.ReadLine();
+        }
+
+        private static void LerArquivo()
+        {
             var enderecoDoArquivo = "contas.txt";
 
             using (var fluxoDeArquivo = new FileStream(enderecoDoArquivo, FileMode.Open))
@@ -27,8 +34,22 @@ namespace ByteBankImportacaoExportacao
                     Console.WriteLine(mensagem);
                 }
             }
+        }
 
-            Console.ReadLine();
+        static void CriarArquivo()
+        {
+            var caminhoNovoArquivo = "contasExportadas.csv";
+
+            using (var fluxoDeArquivo = new FileStream(caminhoNovoArquivo, FileMode.Create))
+            {
+                var contaComoString = "456,7895,4785.40, Gustavo Santos";
+
+                var encoding = Encoding.UTF8;
+
+                var bytes = encoding.GetBytes(contaComoString);
+
+                fluxoDeArquivo.Write(bytes, 0, bytes.Length);
+            }
         }
 
         static ContaCorrente ConverterStringParaContaCorrente(string linha)
