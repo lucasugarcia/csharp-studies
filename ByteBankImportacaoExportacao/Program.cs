@@ -14,15 +14,16 @@ namespace ByteBankImportacaoExportacao
         {
             var enderecoArquivo = "contas.txt";
 
-            var fluxoArquivo = new FileStream(enderecoArquivo, FileMode.Open);
-
-            var buffer = new byte[1024];
-            var numeroBytesLidos = -1;
-
-            while (numeroBytesLidos != 0)
+            using (var fluxoArquivo = new FileStream(enderecoArquivo, FileMode.Open))
             {
-                numeroBytesLidos = fluxoArquivo.Read(buffer, 0, 1024);
-                EscreverBuffer(buffer);
+                var buffer = new byte[1024];
+                var numeroBytesLidos = -1;
+
+                while (numeroBytesLidos != 0)
+                {
+                    numeroBytesLidos = fluxoArquivo.Read(buffer, 0, 1024);
+                    EscreverBuffer(buffer);
+                }
             }
 
             Console.ReadLine();
